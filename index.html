@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scam Reporting Site</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="https://tiiny.host/ad-script.js"></script>
+  <script defer data-domain="pasopmetdezepersonen.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script>
+</head>
+
+<body>
+
+  <!-- Section 1: Latest Warnings -->
+  <section id="latest-warnings">
+    <h1>Laatste Waarschuwingen</h1>
+    <div class="warning-list">
+      <!-- Dynamic content from the backend will fill this list -->
+    </div>
+    <button class="scroll-to-report" onclick="scrollToReport()">Meld een Scam</button>
+  </section>
+
+  <!-- Section 2: Report a Scam -->
+  <section id="report-scam">
+    <h2>Meld een Oplichter</h2>
+    <form id="reportForm" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="firstName">Voornaam:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Voornaam" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Achternaam:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Achternaam" required>
+      </div>
+      <div class="form-group">
+        <label for="alias1">Alias 1:</label>
+        <input type="text" id="alias1" name="alias1" placeholder="Bijnaam of schuilnaam">
+      </div>
+      <div class="form-group">
+        <label for="alias2">Alias 2:</label>
+        <input type="text" id="alias2" name="alias2" placeholder="Bijnaam of schuilnaam">
+      </div>
+      <div class="form-group">
+        <label for="description">Beschrijving van Uiterlijk:</label>
+        <textarea id="description" name="description" placeholder="Beschrijf hoe deze persoon eruitziet" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="whatHappened">Wat is er Gebeurd?</label>
+        <textarea id="whatHappened" name="whatHappened" placeholder="Beschrijf wat er is gebeurd" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="evidence">Inzendingsbewijs URL:</label>
+        <input type="url" id="evidence" name="evidence" placeholder="Voeg bewijs-URL toe" required>
+      </div>
+      <div class="form-group">
+        <!-- Google reCAPTCHA widget -->
+        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+      </div>
+      <button type="submit">Verzend Rapport</button>
+    </form>
+  </section>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
